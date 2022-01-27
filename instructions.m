@@ -1,0 +1,33 @@
+% NINS-STAT Graphical User Interface
+% start.m function starts the entire
+% interface.
+%
+% Final revision date : 11th August 2021
+
+% Author:
+% Dr. Pravat K. Mandal
+% Neuroimaging and Neurospectroscopy Lab,
+% National Brain Research Centre,
+% Manesar, India
+
+function instructions
+
+h.figure = figure('position' , [500 440 500 600]);
+h.instructionspage = uicontrol(h.figure, 'Style', 'text',...
+    'String', 'INSTRUCTIONS',...
+    'Position',[200 550 130 20 ]);
+h.instructionspageins = uicontrol(h.figure, 'Style', 'text',...
+    'String', 'A Quasi Automated Statistical Analysis Software that is meant for enabling a common clinician and common user to perform statistical analysis and accurate come to a mathemtically sound conclusion. The software created was designed to suite the common user and also for someone with advanced statistical knowledge.Proprietary Statistical Software (NINS-STAT) under the license of The National Brain Research Centre.',...
+    'Position',[46 10 450 500 ]);
+h.instructionspageins2 = uicontrol(h.figure, 'Style', 'text',...
+    'String', 'Created By :',...
+    'Position',[20 350 500 20 ]);
+h.instructionspageins3 = uicontrol(h.figure, 'Style', 'text',...
+    'String', 'Neuroimaging and Neurospectroscopy Lab, The National Brain Research Center, Manesar, India ',...
+    'Position',[110 150 300 200 ]);
+h.clickok  = uicontrol(h.figure ,'Style','pushbutton',...
+    'String','OK',...
+    'Position',[210 200 100 20]);
+set(h.clickok, 'callback', {@clickokproc, h});
+
+end
